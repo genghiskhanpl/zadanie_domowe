@@ -1,13 +1,12 @@
 import random
 
-wprowadzona = int(input(f"podaj liczbę z zakresu 0-100: "))
-losowana_liczba = random.randrange(0, 100)
-print(f'wprowadziłeś liczbę: {wprowadzona}')
-print(f'wylosowana liczba to {losowana_liczba}')
+wprowadzona = input(f"podaj liczbę z zakresu 0-100: ")
+num = random.randrange(0, 5)
 
-if wprowadzona == losowana_liczba:
-    print('gratulacje odgadłeś')
-else:
-    print ('sprobuj ponownie')
+while wprowadzona != num:
+    print('try again')
     wprowadzona = int(input(f"podaj liczbę z zakresu 0-100: "))
-# chyba musze sie nauczyć pętli
+while wprowadzona == num:
+    print(f'odgadles, twoja liczba to {num}')
+    break
+
