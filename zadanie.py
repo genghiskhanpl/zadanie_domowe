@@ -1,16 +1,21 @@
-import random
+import random, sys
 
-wprowadzona = int(input(f"podaj liczbę z zakresu 0-100: "))
+name = input('Wprowadź nazwę użytkownika: ')
+if len(name) < 3:
+    print('wprowadz imię, minimum 3 znaki')
+    sys.exit('konczenie programu')
+
+wprowadzona = int(input(f"{name} podaj liczbę z zakresu 0-100: "))
 num = random.randrange(1, 100)
 liczba_prob = 1
 while wprowadzona != num:
     if wprowadzona >= num:
-        print('wprowadzona liczba była większa niż losowana')
+        print('Wprowadzona liczba była większa niż losowana')
     elif wprowadzona <= num:
-        print('wprowadzona liczba była mniejsza niż losowana')
-    wprowadzona = int(input(f"podaj liczbę z zakresu 0-100: "))
+        print('Wprowadzona liczba była mniejsza niż losowana')
+    wprowadzona = int(input(f"Wpisz liczbę z zakresu 0-100: "))
     liczba_prob = liczba_prob + 1
 while wprowadzona == num:
-    print(f'odgadles, twoja liczba to {num}')
+    print(f'Gratulacje {name} odgadles, Twoja liczba to {num}')
     break
-print(f'zajęło ci to {liczba_prob} razy')
+print(f'Zajęło ci to {liczba_prob} razy')
