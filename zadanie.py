@@ -1,5 +1,4 @@
 import random, sys
-gramy_ponownie = ''
 
 while True:
     name = str(input('Wprowadź nazwę użytkownika: '))
@@ -25,15 +24,15 @@ while True:
     print(f'Zajęło ci to {liczba_prob} razy')
     # czesc ktora pyta czy zagramy jeszcze raz
     gramy_ponownie = str(input("czy gramy jeszcze raz? (t/n)?"))
-
-    if gramy_ponownie == 't':
-        print('zagrajmy')
-        #continue
-    elif gramy_ponownie == 'n':
-        print(f'Na razie {name}!')
-        break #sys.exit()
-    else:
-        gramy_ponownie != 'n'
-        continue
-        print('Wpisz "t" lub "n": ')
+# instrukcje warunkowe, a to trzeba zrobic jako pętle
+    while True:
+        if gramy_ponownie == 't':
+            print('dobra zagrajmy jeszcze raz')
+            break
+        elif gramy_ponownie == 'n':
+            print('ok, na razie !')
+            sys.exit()
+        else:
+            print('wproadż "t" lub "n"')
+            break
 
