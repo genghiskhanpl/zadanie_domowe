@@ -23,9 +23,9 @@ while True:
         break
     print(f'Zajęło ci to {liczba_prob} razy')
     # czesc ktora pyta czy zagramy jeszcze raz
-    gramy_ponownie = str(input("czy gramy jeszcze raz? (t/n)?"))
-# instrukcje warunkowe, a to trzeba zrobic jako pętle
+    # instrukcje warunkowe, a to trzeba zrobic jako pętle
     while True:
+        gramy_ponownie = str(input("czy gramy jeszcze raz? (t/n)?"))
         if gramy_ponownie == 't':
             print('dobra zagrajmy jeszcze raz')
             break
@@ -34,5 +34,4 @@ while True:
             sys.exit()
         else:
             print('wproadż "t" lub "n"')
-            break
 
