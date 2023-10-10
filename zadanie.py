@@ -2,13 +2,15 @@ import random, sys
 gramy_ponownie = ''
 
 while True:
-    name = input('Wprowadź nazwę użytkownika: ')
+    name = str(input('Wprowadź nazwę użytkownika: '))
     if len(name) < 3:
         print('wprowadz imię, minimum 3 znaki')
         sys.exit('konczenie programu')
+    else:
+        print(f'witaj {name}! Zobaczymy jak Ci pójdzie')
 
     wprowadzona = int(input(f"{name} podaj liczbę z zakresu 0-100: "))
-    num = random.randrange(1, 5)
+    num = random.randrange(1, 2)
     liczba_prob = 1
     while wprowadzona != num:
         if wprowadzona >= num:
@@ -21,15 +23,17 @@ while True:
         print(f'Gratulacje {name} odgadles, Twoja liczba to {num}')
         break
     print(f'Zajęło ci to {liczba_prob} razy')
+    # czesc ktora pyta czy zagramy jeszcze raz
     gramy_ponownie = str(input("czy gramy jeszcze raz? (t/n)?"))
 
     if gramy_ponownie == 't':
         print('zagrajmy')
-        continue
+        #continue
     elif gramy_ponownie == 'n':
-        print('na razie')
-        sys. exit()
+        print(f'Na razie {name}!')
+        break #sys.exit()
     else:
-        print('wpisz "t" lub "n": ')
-#czesc ktora pyta czy zagramy jeszcze raz
+        gramy_ponownie != 'n'
+        continue
+        print('Wpisz "t" lub "n": ')
 
